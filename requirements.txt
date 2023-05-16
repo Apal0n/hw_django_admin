@@ -1,0 +1,7 @@
+django==4.2
+djangorestframework
+django-cors-headers
+drf-yasg
+Pillow
+psycopg
+django-environ

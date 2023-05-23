@@ -105,13 +105,13 @@ def reply_image(img, text=None, ext='png', font_type='arial.ttf', font_size=16, 
 
 
 def reply_image_store(instance, filename):
-    return f'media/{instance.profile.user.username}/{timezone.now().strftime("%Y%m%d_%H%M")}/{filename}'
+    return f'profile/{instance.profile.user.username}/{instance.tweet.text}/{filename}'
 
 
 class Reply(models.Model):
     tweet = models.ForeignKey(Tweet, on_delete=models.CASCADE)
     text = models.CharField(max_length=140)
-    image = models.ImageField(upload_to=tweet_image_store, null=True, blank=True)
+    image = models.ImageField(upload_to=reply_image_store, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     profile = models.ForeignKey(Profile, on_delete=models.PROTECT)

@@ -3,5 +3,5 @@ djangorestframework
 django-cors-headers
 drf-yasg
 Pillow
-psycopg
+psycopg2-binary
 django-environ

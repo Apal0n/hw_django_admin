@@ -19,8 +19,8 @@ class TweetAdmin(admin.ModelAdmin):
         TweetImagesInline
     ]
     date_hierarchy = 'created_at'
-    actions_on_bottom = True
-    actions_on_top = False
+    # actions_on_bottom = True
+    # actions_on_top = False
     empty_value_display = '--empty--'
     # exclude = ['profile', 'image']
     # fields = ['text', ]

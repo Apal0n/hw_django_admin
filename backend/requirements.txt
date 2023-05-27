@@ -5,3 +5,4 @@ drf-yasg
 Pillow
 psycopg2-binary
 django-environ
+gunicorn
